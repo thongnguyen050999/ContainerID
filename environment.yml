@@ -1,0 +1,46 @@
+# To Run: conda env create -f environment.yml
+name: container
+channels:
+- fastai
+- pytorch
+- defaults
+- conda-forge
+- roebel
+- numba
+dependencies:
+- pytorch
+- keras
+- torchvision
+- rq
+- tensorflow-gpu #due to elmo model from JR, we have to use 1.15.0 instead of version 2
+- tensorflow-hub
+- jupyter
+- ipyparallel
+- unidecode
+- pymongo
+- sshtunnel
+- beautifulsoup4
+- lxml
+- redis
+- pip
+- python>=3.6
+- pip:
+  - roman
+  - spacy[cuda]
+  - mpipe
+  - numba
+  - FinnSyll
+  - msaf
+  - pebble
+  - joblib
+  - dvc
+  - 'dvc[ssh]'
+  - scipy==1.2.0
+  - mido
+  - six
+  - pyfluidsynth-nowarnings
+  - sf2utils
+  - librosa
+  - pytest
+  - pytest-xdist
+#  - "--editable=git+https://github.com/fastai/fastai@master"
